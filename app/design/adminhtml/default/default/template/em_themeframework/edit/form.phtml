@@ -1,0 +1,256 @@
+<?php
+/**
+ * EMThemes
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the framework to newer
+ * versions in the future. If you wish to customize the framework for your
+ * needs please refer to http://www.emthemes.com/ for more information.
+ *
+ * @category    EM
+ * @package     EM_ThemeFramework
+ * @copyright   Copyright (c) 2012 CodeSpot JSC. (http://www.emthemes.com/)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author      Giao L. Trinh (giao.trinh@emthemes.com)
+ */
+
+?>
+<div class="entry-edit">
+    <?php echo $this->getForm()->getElement('scope_fieldset')->toHtml();?>
+</div>
+
+<div class="col-left entry-edit" style="float:left; width:220px">	
+	<div class="entry-edit-head"><h4><?php echo $this->__("Available Container Blocks") ?></h4></div>
+	<fieldset>
+		<?php echo $this->getForm()->getElement('package_theme')->toHtml();?>
+		<div class="available_blocks">
+			<!-- SAMPLE BLOCKS
+			<div class="block_item">
+				Block 1
+				<input type="hidden" value="emframework_area1" />
+			</div>
+			<div class="block_item">
+				Block 2
+				<input type="hidden" value="emframework_area2" />
+			</div>
+			<div class="block_item">
+				Block 6
+				<input type="hidden" value="emframework_area6" />
+			</div>
+			-->
+		</div>
+	</fieldset>
+</div>
+
+<div class="col-right entry-edit" style="float:right; width:220px">	
+	
+	<div class="entry-edit-head"><h4><?php echo $this->__("Grid Attributes") ?></h4></div>
+	<fieldset>
+		<table class="attr-list">
+			<tr>
+				<td class="label"><label for="attr_column"><?php echo $this->__("Columns") ?>:</label></td>
+				<td class="value attr-input"><input type="text" class="input-text" id="attr_column" size="5" /></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="attr_pull"><?php echo $this->__("Pull") ?>:</label></td>
+				<td class="value attr-input"><input type="text" class="input-text" id="attr_pull" size="5" /></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="attr_push"><?php echo $this->__("Push") ?>:</label></td>
+				<td class="value attr-input"><input type="text" class="input-text" id="attr_push" size="5" /></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="attr_prefix"><?php echo $this->__("Prefix") ?>:</label></td>
+				<td class="value attr-input"><input type="text" class="input-text" id="attr_prefix" size="5" /></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="attr_suffix"><?php echo $this->__("Suffix") ?>:</label></td>
+				<td class="value attr-input"><input type="text" class="input-text" id="attr_suffix" size="5" /></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="attr_first"><?php echo $this->__("First") ?>:</label></td>
+				<td class="value attr-checkbox"><input type="checkbox" class="input-checkbox" id="attr_first" size="5" /></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="attr_last"><?php echo $this->__("Last") ?>:</label></td>
+				<td class="value attr-checkbox"><input type="checkbox" class="input-checkbox" id="attr_last" size="5" /></td>
+			</tr>
+			<tr>
+				<td class="label" colspan="2"><label for="attr_custom_css"><?php echo $this->__("Custom CSS Class") ?>:</label></td>
+			</tr>
+			<tr>
+				<td class="value attr-input-thumb" colspan="2"><input type="text" class="input-text" id="attr_custom_css" size="25" /></td>
+			</tr>
+			<tr>
+				<td class="label" colspan="2"><label for="attr_inner_html"><?php echo $this->__("Custom Inner HTML") ?>:</label></td>
+			</tr>
+			<tr>
+				<td class="value" colspan="2">
+					<textarea id="attr_inner_html" cols="25" rows="5"></textarea>
+					<p class="note">Example: <code>&lt;div class="inner"&gt;{{content}}&lt;/div&gt;</code></p>
+				</td>
+			</tr>
+			<!--
+			<tr>
+				<td class="label" colspan="2"><label for="attr_layout_enable"><?php echo $this->__("Display on") ?>:</label></td>
+			</tr>
+			<tr>
+				<td class="value" colspan="2">
+					<select id="attr_layout_enable" multiple="true" cols="5">
+						<option value="1column" selected="selected"><?php echo $this->__("1 Column Page") ?></option>
+						<option value="2columns-left" selected="selected"><?php echo $this->__("2 Column Left Page") ?></option>
+						<option value="2columns-right" selected="selected"><?php echo $this->__("2 Column Right Page") ?></option>
+						<option value="3columns" selected="selected"><?php echo $this->__("3 Column Page") ?></option>
+					</select>
+					<p class="note">Press SHIFT/CTRL key for multiple select</p>
+				</td>
+			</tr>
+			-->
+			<tr>
+				<td class="label"><label for="attr_display_empty" class="text-checkbox"><?php echo $this->__("Force display even all child blocks have empty content?") ?>:</label></td>
+				<td class="value attr-checkbox"><input type="checkbox" class="input-checkbox" id="attr_display_empty" value="1" size="5" /></td>
+			</tr>
+			
+			<tr>
+				<td align="right" colspan="2">
+					<br/>
+					<button onclick="EM_Framework.canvas.applySelectedGridItemAttributes(); return false;"><span><span><span><?php echo $this->__("Apply")?></span></span></span></button>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<div class="entry-edit-head"><h4><?php echo $this->__("Container Attributes") ?></h4></div>
+	<fieldset>
+		<table class="attr-list">
+			<tr>
+				<td class="label" colspan="2"><label for="container_attr_custom_css"><?php echo $this->__("Custom CSS Class") ?>:</label></td>
+			</tr>
+			<tr>
+				<td class="value  attr-input-thumb" colspan="2"><input type="text" class="input-text" id="container_attr_custom_css" size="25" /></td>
+			</tr>
+			<tr>
+				<td class="label" colspan="2"><label for="container_attr_inner_html"><?php echo $this->__("Custom Inner HTML") ?>:</label></td>
+			</tr>
+			<tr>
+				<td class="value" colspan="2">
+					<textarea id="container_attr_inner_html" cols="25" rows="5"></textarea>
+					<p class="note">Example: <code>&lt;div class="inner"&gt;{{content}}&lt;/div&gt;</code></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="label" colspan="2"><label for="container_attr_outer_html"><?php echo $this->__("Custom Outer HTML") ?>:</label></td>
+			</tr>
+			<tr>
+				<td class="value" colspan="2">
+					<textarea id="container_attr_outer_html" cols="25" rows="5"></textarea>
+					<p class="note">Example: <code>&lt;div class="wrapper"&gt;      {{content}}&lt;/div&gt;</code></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="label attr-label-checkbox"><label for="container_attr_display_empty" class="text-checkbox"><?php echo $this->__("Force display even all child blocks have empty content?") ?>:</label></td>
+				<td class="value  attr-checkbox"><input type="checkbox" class="input-checkbox" id="container_attr_display_empty" value="1" /></td>
+			</tr>
+			
+			<tr>
+				<td align="right" colspan="2">
+					<br/>
+					<button onclick="EM_Framework.canvas.applySelectedContainerAttributes(); return false;"><span><span><span><?php echo $this->__("Apply")?></span></span></span></button>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	
+</div>
+
+<div class="col-main entry-edit" style="margin:0 240px;">
+	<div style="float:left;width:100%">
+		
+		<div class="entry-edit-head">
+			<h4><?php echo $this->__("Layout Canvas") ?></h4>		
+		</div>
+
+		<fieldset>		
+			<!-- Toolbar of Canvas -->
+			<div class="toolbar">
+				<button onclick="EM_Framework.canvas.createContainerDiv();return false;"><span><span><span><?php echo $this->__("New Container Element")?></span></span></span></button>
+				<button onclick="EM_Framework.canvas.createGridDiv();return false;"><span><span><span><?php echo $this->__("New Grid Element")?></span></span></span></button>
+				<button onclick="EM_Framework.canvas.createClearDiv();return false;"><span><span><span><?php echo $this->__("New Clear Element")?></span></span></span></button>
+				
+				<button onclick="EM_Framework.canvas.createFreeContainerDiv();return false;"><span><span><span><?php echo $this->__("New DIV Element")?></span></span></span></button>
+			</div>
+		
+			<!-- Canvas -->
+			<div class="layout_canvas">
+				<!--
+				<div class="container_24">
+					<div class="container-toolbar"><button onclick="EM_Framework.canvas.deleteContainerDiv(this.parentNode.parentNode); return false;"><span><span><span></span>Delete</span></span></button></div>
+					<!-- SAMPLE GRIDS 
+					<div class="grid_6 grid_item">
+						<div class="border">
+							<div class="toolbar"><button onclick="EM_Framework.canvas.deleteGridDiv(this.parentNode.parentNode.parentNode); return false;"><span><span><span></span>Delete</span></span></button></div>
+							<div class="grid_item_dropzone">
+								<div class="block_item">
+										Block 3
+										<input type="hidden" value="emframework_area3" />
+								</div>
+								<div class="block_item">
+										Block 4
+										<input type="hidden" value="emframework_area4" />
+								</div>
+								<div class="block_item">
+										Block 5
+										<input type="hidden" value="emframework_area5" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid_6 grid_item">
+						<div class="border">
+							<div class="toolbar"><button onclick="EM_Framework.canvas.deleteGridDiv(this.parentNode.parentNode.parentNode); return false;"><span><span><span>Delete</span></span></span></button></div>
+							<div class="grid_item_dropzone">
+								<div class="block_item">
+										Block 7
+										<input type="hidden" value="emframework_area7" />
+								</div>
+								<div class="block_item">
+										Block 8
+										<input type="hidden" value="emframework_area8" />
+								</div>
+								<div class="block_item">
+										Block 9
+										<input type="hidden" value="emframework_area9" />
+								</div>
+							</div>
+						</div>
+					</div>
+		
+					<div class="clear">
+						<div class="toolbar"><button onclick="EM_Framework.canvas.deleteClearDiv(this.parentNode.parentNode); return false;"><span><span><span></span>Delete</span></span></button></div>
+					</div>
+
+					- ->
+				
+				</div>
+				-->
+			</div>
+		</fieldset>
+	</div>
+</div>
+
+
+<?php echo $extraHtml ?>
+
+
+<?php echo $this->getChildHtml('form_after');?>

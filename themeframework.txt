@@ -1,0 +1,10 @@
+app\code\local\EM\Themeframework
+app\etc\modules\EM_Themeframework.xml
+app\design\adminhtml\default\default\layout\em_themeframework.xml
+app\design\adminhtml\default\default\template\em_themeframework
+app\design\frontend\default\emsample
+app\design\frontend\default\default\layout\em_themeframework.xml
+skin\adminhtml\default\default\em_themeframework
+skin\frontend\default\emsample
+skin\frontend\default\default\css\em_themeframework.css
+skin\frontend\default\default\js\em_themeframework

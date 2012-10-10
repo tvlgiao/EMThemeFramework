@@ -1,0 +1,420 @@
+/**
+ * EMThemes
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the framework to newer
+ * versions in the future. If you wish to customize the framework for your
+ * needs please refer to http://www.emthemes.com/ for more information.
+ *
+ * @category    EM
+ * @package     EM_ThemeFramework
+ * @copyright   Copyright (c) 2012 CodeSpot JSC. (http://www.emthemes.com/)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author      Giao L. Trinh (giao.trinh@emthemes.com)
+ */
+
+.drop_tip { 
+	font-size:30px; 
+	font-weight:bold; 
+	color:#e0e0e0; 
+	line-height:1.5em 
+	position:absolute;
+}
+
+.toolbar { padding:10px 0 }
+
+.layout_canvas { 
+	
+}
+
+.container_free {
+	background:#fff url(img/bg_grid_item.png) center center no-repeat;
+	padding:10px;
+	margin-bottom:10px;
+	cursor:move;
+	border:1px dashed #fff;
+}
+
+.container_free.selected {
+	border-color:#000;
+}
+
+.container_free .container-toolbar {
+	margin:0 0 20px;
+}
+
+.container_24 {
+	background:#fff;
+	padding-top:10px;
+	margin-bottom:20px;
+	background:url(img/grid-24-720px.png);
+	border:1px solid #fafafa;
+	cursor:move;
+	
+}
+
+.container_24:after { 
+	content:' ';
+	display:block;
+	clear:both;
+	width:100%;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;
+}
+
+.container_24.selected { 
+	border:1px dashed #000;
+}
+
+.container_24 .container-toolbar {
+	margin:0 20px 10px;
+}
+
+.container_24 > .grid_item,
+.container_24 > .clear {
+	cursor:move;
+}
+
+.container_24 > .clear { 
+	height:auto;
+	width:99%;
+	background-color:#ccc;
+	visibility:visible;
+	padding:10px 0;
+	margin:0 auto 10px;
+	box-shadow:0 3px 5px #e9e9e9;
+}
+.container_24 > .clear:last-child { 
+	margin-bottom:10px;
+}
+.container_24 > .clear .toolbar { 
+	padding:0 20px;
+}
+
+.available_blocks {
+	padding:10px 0;
+	
+}
+
+.grid_item { 
+	margin-bottom:10px;
+}
+
+.block_item {
+	margin-bottom:5px;
+	background:rgba(72,141,198,.7);
+	padding:5px;
+	
+}
+
+.block_item:last-child {
+	margin-bottom:0;
+}
+
+.grid_item > .border {
+	border:2px solid #d6d6d6;
+	background-color:#fff;
+	box-shadow:0 3px 5px #e9e9e9;
+}
+
+.grid_item.selected > .border {
+	border-color:#f8b356;
+}
+
+.grid_item .toolbar { 
+	padding:10px 15px 0;
+	margin:0;
+}
+
+
+
+.grid_item_dropzone {
+	padding:15px;
+	/*background:url(img/bg_grid_item.png) center center no-repeat;*/
+}
+
+
+
+
+table.attr-list { width:100% }
+.attr-list td.label { padding:2px; font-weight:bold }
+.attr-list td.value { padding:2px }
+.attr-list .note { font-size:11px; margin:0; }
+.attr-list td.value input, .attr-list td.value textarea, .attr-list td.value select { width:95% }
+
+
+
+/*BackEnd 26-07============================================================================================*/
+.themeframework-adminhtml-area-edit .content-header h3{margin: 4px 0 0 0; padding: 0px;}
+.themeframework-adminhtml-area-edit .content-header{padding-bottom:10px; border-bottom: none !important;}
+.themeframework-adminhtml-area-edit .content-header-floating .content-header{padding:6px 8px 10px 28px;}
+.themeframework-adminhtml-area-edit .middle{padding: 18px 27px 0;background:url("img/header_bg.png") repeat-x scroll 0 0 #f2f2f2 !important}
+.themeframework-adminhtml-area-edit .hor-scroll{width: 500px; margin: 0 auto;}
+.themeframework-adminhtml-area-edit .form-list td.label{width: 118px;}
+.themeframework-adminhtml-area-edit .form-list td.label label{width: 112px;}
+
+.themeframework-adminhtml-area-edit  button,
+.themeframework-adminhtml-area-edit .form-button{
+	background: none repeat scroll 0 0 transparent !important;
+    border: 0 none !important;
+    cursor: pointer;
+    margin: 0 0 5px 5px !important;
+    overflow: visible !important;
+    padding-left: 0px !important;
+	padding-right:0px !important;
+    width: auto !important;
+	color: #555555;}
+
+.themeframework-adminhtml-area-edit  button span { 
+    height: 28px !important;
+    line-height: 28px;
+    padding: 0 0 0 35px;
+	font-size:14px;
+    display: inline-block !important; }
+
+.themeframework-adminhtml-area-edit  button span span { 
+    padding: 0 !important;
+	display: inline-block !important;}
+.themeframework-adminhtml-area-edit  button span span span{padding: 0 11px 0 5px !important;}
+
+.themeframework-adminhtml-area-edit .content-header  button span { 
+	background: url("img/btn_reset_bg.png") repeat scroll 0 0px transparent; }
+.themeframework-adminhtml-area-edit .content-header  button span span { 
+	background: url("img/btn_reset_bg.png") repeat scroll 100% 100% transparent !important;}
+
+.themeframework-adminhtml-area-edit .col-main  button span { 
+	background: url("img/btn_new_bg.png") repeat scroll 0 0px transparent; }
+.themeframework-adminhtml-area-edit .col-main  button span span { 
+	background: url("img/btn_new_bg.png") repeat scroll 100% 100% transparent !important;}
+.themeframework-adminhtml-area-edit .col-main  button { color: #ffffff;white-space:normal!important}
+.themeframework-adminhtml-area-edit .col-main  button span{white-space:nowrap!important;}
+/*col right button*/
+
+.themeframework-adminhtml-area-edit .col-right  button { color: #ffffff; 
+	float: left; *height:28px;
+    margin: 0 !important;
+    padding: 0px !important;}
+.themeframework-adminhtml-area-edit .col-right  button span{padding:0!important;}
+.themeframework-adminhtml-area-edit .col-right  button span span{padding: 0 0 0 15px !important;background: url("img/btn_apply_bg.png") no-repeat scroll 0 0 transparent !important;height:28px; line-height:27px;}
+.themeframework-adminhtml-area-edit .col-right  button span span span{padding: 0 87px 0 73px !important;background-position:100% 100% !important}
+
+
+/*col left button*/
+.themeframework-adminhtml-area-edit .col-left button span { 
+	background: url("img/btn_apply_bg.png") repeat scroll 0 0px transparent; }
+.themeframework-adminhtml-area-edit .col-left  button span span { 
+	background: url("img/btn_apply_bg.png") repeat scroll 100% 100% transparent !important;}
+.themeframework-adminhtml-area-edit .col-left  button { color: #ffffff;}
+
+.themeframework-adminhtml-area-edit  button.back span { 
+	background: url("img/btn_back_bg.png") repeat scroll 0 0px transparent;
+}
+.themeframework-adminhtml-area-edit  button.back span span { 
+	background: url("img/btn_back_bg.png") repeat scroll 100% 100% transparent !important;}
+	
+.themeframework-adminhtml-area-edit  button.save span { 
+	background: url("img/btn_save_bg.png") repeat scroll 0 0px transparent;
+}
+.themeframework-adminhtml-area-edit  button.save span span { 
+	background: url("img/btn_save_bg.png") repeat scroll 100% 100% transparent !important;}
+	
+.themeframework-adminhtml-area-edit .content-header  button.add span { 
+	background:none !important;padding:0 !important;
+}
+.themeframework-adminhtml-area-edit .content-header  button.add span span { 
+	background:  url("img/btn_save_bg.png") repeat scroll 0% 0% transparent !important;padding-left:40px!important;}
+	
+.themeframework-adminhtml-area-edit .content-header  button.add span span span {	
+	background: url("img/btn_save_bg.png") repeat scroll 100% 100% transparent !important;padding:0 10px 0 0 !important}
+	
+.themeframework-adminhtml-area-edit .content-header  button.delete span { 
+	background: none;padding:0 !important;
+}
+.themeframework-adminhtml-area-edit .content-header  button.delete span span { 
+	background: url("img/btn_delete_bg.png") repeat scroll 0% 0% transparent !important;padding-left:40px!important}
+	
+.themeframework-adminhtml-area-edit .content-header  button.delete span span span{ 
+	background: url("img/btn_delete_bg.png") repeat scroll 100% 100% transparent !important;padding:0 10px 0 0!important}	
+.themeframework-adminhtml-area-edit  button.save, .themeframework-adminhtml-area-edit  button.add,.themeframework-adminhtml-area-edit  button.delete{color: #fff;}
+
+
+/*.themeframework-adminhtml-area-edit .entry-edit{background:url("img/scope_bg.png") repeat scroll 0 0 transparent !important;}
+.themeframework-adminhtml-area-edit .entry-edit .entry-edit-head{background:url("img/scope_bg.png") repeat scroll 100% 100% transparent !important;
+	height: 31px;
+    line-height: 34px;
+	margin-left: 10px;}*/
+.themeframework-adminhtml-area-edit .entry-edit .entry-edit-head{background:url("img/scope_bg.png") repeat scroll 0 0 transparent !important; padding: 0 0 0 10px !important;height:35px}
+
+.themeframework-adminhtml-area-edit .col-left,.themeframework-adminhtml-area-edit .col-right{
+width:240px!important}
+.themeframework-adminhtml-area-edit .col-main{margin:0 260px!important;}
+
+
+.themeframework-adminhtml-area-edit .entry-edit .entry-edit-head h4{background:url("img/scope_bg.png") repeat scroll 100% 100% transparent !important;
+	height: 35px;
+    line-height: 34px;
+	/*margin-left: 1%;
+	width: 99%;*/
+	font-size:16px;
+	padding: 0 ;
+	float:none;
+	text-align: center;}
+.themeframework-adminhtml-area-edit .col-left .entry-edit-head h4{padding-left: 6px;/*width:93% !important;*/text-align:left !important;}
+.themeframework-adminhtml-area-edit .col-right .entry-edit-head h4{padding-left:6px;/*width:94% !important;*/text-align:left !important;}
+.themeframework-adminhtml-area-edit .col-left .block_item{background:url("img/block_item_bg_col_left.png") no-repeat scroll 0 0 transparent !important; height: 24px;
+color: #fff; font-weight:bold; line-height: 22px;font-size:14px;
+    padding-left: 10px;}
+.themeframework-adminhtml-area-edit .entry-edit fieldset, .themeframework-adminhtml-area-edit .entry-edit .fieldset{background:#fff !important;
+ border-radius: 0 0 4px 4px !important; border: 1px solid #d6d6d6 !important;}
+.themeframework-adminhtml-area-edit .col-main fieldset{padding: 0;}
+.themeframework-adminhtml-area-edit .col-main .toolbar{background:url("img/toolbar_bg.png") repeat scroll 0 bottom transparent !important;text-align: center; padding: 15px 0;}
+.themeframework-adminhtml-area-edit .col-main .layout_canvas .toolbar{background:none !important;height: auto; text-align: left; padding:15px 0 0; margin: 0 15px !important;}
+
+ .themeframework-adminhtml-area-edit .col-left  fieldset{background:url("img/fieldset_bg.png") no-repeat scroll 60% 97% #fff !important; padding-bottom: 40px;}
+ .themeframework-adminhtml-area-edit .col-main  .layout_canvas button{background:url("img/btn_delete_bg_col_main.png") no-repeat scroll 0 0 transparent !important; height: 21px;margin-left:0!important;}
+ .themeframework-adminhtml-area-edit .col-main  .layout_canvas button span{background:none; height: auto !important;}
+ .themeframework-adminhtml-area-edit .col-main  .layout_canvas button span span{background:none !important; display:none !important;}
+ .themeframework-adminhtml-area-edit .container_free{background:none; padding:15px;}
+ .themeframework-adminhtml-area-edit .grid_item_dropzone{/*background:url("img/bg_grid_item_layout.png") no-repeat scroll 90% center transparent !important;*/ padding:15px;}
+
+/*Grid 1*/
+.themeframework-adminhtml-area-edit .grid_1 .grid_item_dropzone{padding:0px}
+/*Grid 2*/
+/*Grid 3*/
+/*Grid 4*/
+/*Grid 5*/
+.themeframework-adminhtml-area-edit .grid_5 .grid_item_dropzone {
+   /* background: url("img/bg_grid_item_layout.png") no-repeat scroll 75% 70% transparent !important;*/
+}
+.themeframework-adminhtml-area-edit .grid_5 .block_item{background:url("img/block_item_grid_5.png") no-repeat scroll 0 0 transparent !important; color: #FFFFFF; height: 42px !important;}
+/*Grid 6*/
+.themeframework-adminhtml-area-edit .grid_6 .block_item{background:url("img/block_item_grid_6.png") no-repeat scroll 0 0 transparent !important; color: #FFFFFF;  height: 42px !important;}
+.themeframework-adminhtml-area-edit .grid_6 .grid_item_dropzone{/*background: url("img/bg_grid_item_layout.png") no-repeat scroll 47% 70% transparent !important;*/}
+/*Grid 7*/
+.themeframework-adminhtml-area-edit .grid_7 .block_item{background:url("img/block_item_grid_7.png") no-repeat scroll 0 0 transparent !important; color: #FFFFFF;  height: 42px !important;}
+.themeframework-adminhtml-area-edit .grid_7 .grid_item_dropzone{/*background: url("img/bg_grid_item_layout.png") no-repeat scroll 30% 70% transparent !important;*/}
+/*Grid 8*/
+.themeframework-adminhtml-area-edit .grid_8 .block_item{background:url("img/block_item_grid_8.png") no-repeat scroll 0 0 transparent !important; color: #FFFFFF;  height: 42px !important;}
+.themeframework-adminhtml-area-edit .grid_8 .grid_item_dropzone{/*background: url("img/bg_grid_item_layout.png") no-repeat scroll 20% 70% transparent !important;*/}
+/*Grid 9*/
+.themeframework-adminhtml-area-edit .grid_9 .block_item{background:url("img/block_item_grid_9.png") no-repeat scroll 0 0 transparent !important; color: #FFFFFF;  height: 42px !important;}
+.themeframework-adminhtml-area-edit .grid_9 .grid_item_dropzone{/*background: url("img/bg_grid_item_layout.png") no-repeat scroll 20% 70% transparent !important;*/}
+/*Grid 10*/
+.themeframework-adminhtml-area-edit .grid_10 .grid_item_dropzone{background-position:83% center!important;}
+.themeframework-adminhtml-area-edit .grid_10 .block_item{background:url("img/block_item_grid_10.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 11*/
+.themeframework-adminhtml-area-edit .grid_11 .grid_item_dropzone{background-position:83% center!important;}
+.themeframework-adminhtml-area-edit .grid_11 .block_item{background:url("img/block_item_grid_11.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 12*/
+.themeframework-adminhtml-area-edit .grid_12 .grid_item_dropzone{background-position:87% center!important;}
+.themeframework-adminhtml-area-edit .grid_12 .block_item{background:url("img/block_item_grid_12.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 13*/
+.themeframework-adminhtml-area-edit .grid_13 .grid_item_dropzone{background-position:87% center!important;}
+.themeframework-adminhtml-area-edit .grid_13 .block_item{background:url("img/block_item_grid_13.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 14*/
+.themeframework-adminhtml-area-edit .grid_14 .block_item{background:url("img/block_item_grid_14.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 15*/
+.themeframework-adminhtml-area-edit .grid_15 .block_item{background:url("img/block_item_grid_15.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 16*/
+.themeframework-adminhtml-area-edit .grid_16 .block_item{background:url("img/block_item_grid_16.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 17*/
+.themeframework-adminhtml-area-edit .grid_17 .block_item{background:url("img/block_item_grid_17.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 18*/
+.themeframework-adminhtml-area-edit .grid_18 .block_item{background:url("img/block_item_grid_18.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 19*/
+.themeframework-adminhtml-area-edit .grid_19 .block_item{background:url("img/block_item_grid_19.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 20*/
+.themeframework-adminhtml-area-edit .grid_20 .block_item{background:url("img/block_item_grid_20.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF;border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 21*/
+.themeframework-adminhtml-area-edit .grid_21 .block_item{background:url("img/block_item_grid_21.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 22*/
+.themeframework-adminhtml-area-edit .grid_22 .block_item{background:url("img/block_item_grid_22.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px;}
+/*Grid 23*/
+.themeframework-adminhtml-area-edit .grid_23 .block_item{background:url("img/block_item_grid_23.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF; border-radius:6px;  -moz-border-radius: 6px;
+    -webkit-border-radius: 6px; 
+    -khtml-border-radius: 6px;}
+/*Grid 24*/
+
+/*.themeframework-adminhtml-area-edit .grid_24 .grid_item_dropzone{background-position:96% center !important;}*/
+.themeframework-adminhtml-area-edit .grid_24 .block_item{
+background:url("img/block_item_grid_24.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF;  border-radius:6px;  -moz-border-radius: 6px;    -webkit-border-radius: 6px;     -khtml-border-radius: 6px; }
+.themeframework-adminhtml-area-edit .col-main .block_item{
+font-weight: bold;
+line-height: 23px;font-size:14px; color:#fff;
+padding: 5px 5px 5px 10px; height: 22px; opacity: 0.8;}
+.themeframework-adminhtml-area-edit .col-main .selected.grid_5 .block_item{padding-left:3px; padding-top:5px}
+.themeframework-adminhtml-area-edit .col-main .selected.grid_6 .block_item{padding-top:5px;padding-left:5px}
+.themeframework-adminhtml-area-edit .col-main .selected.grid_7 .block_item,
+.themeframework-adminhtml-area-edit .col-main .selected.grid_8 .block_item,
+.themeframework-adminhtml-area-edit .col-main .selected.grid_9 .block_item
+{padding-top:5px;padding-left:10px} 
+.themeframework-adminhtml-area-edit .col-main .block_item{filter:alpha(opacity=80) !important;}
+.themeframework-adminhtml-area-edit .col-main .block_item{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=80)" !important;filter:alpha(opacity=80)!important;}
+
+.themeframework-adminhtml-area-edit .container_free .block_item{background:url("img/block_item_container_free.png") repeat-x scroll right 0 transparent !important; color: #FFFFFF;/*width:766px;*/border-radius:5px; height:22px}
+
+
+.themeframework-adminhtml-area-edit .attr-list td.value input{width:31px;border:none !important;padding:7px 5px 5px;*padding: 6px 5px 5px;}
+.themeframework-adminhtml-area-edit .attr-list td.value.attr-input{background: url("img/input_bg.png") no-repeat scroll 0 0 transparent !important; height: 35px; *width:45px!important;}
+.themeframework-adminhtml-area-edit .attr-list td.value input#attr_custom_css{/*background: url("img/input_attr_custom_css_bg.png") no-repeat scroll 0 0 transparent !important; height: 31px;border: none !important;*/ width:165px; padding: 5px 10px;}
+.themeframework-adminhtml-area-edit .attr-list td.value.attr-input-thumb{background: url("img/input_attr_custom_css_bg.png") no-repeat scroll 0 0 transparent !important;height:35px}
+.themeframework-adminhtml-area-edit .attr-list td.value input#container_attr_custom_css{/*background: url("img/input_attr_custom_css_bg.png") no-repeat scroll 0 0 transparent !important; height: 31px;border: none !important;*/ width:165px; padding: 5px 10px; float: left !important;}
+.themeframework-adminhtml-area-edit .attr-list td.value {/*text-align: right;*/ height: 31px;}
+.themeframework-adminhtml-area-edit .col-right fieldset{padding: 0px 10px 10px; overflow:hidden;}
+.themeframework-adminhtml-area-edit .col-right tr td .note code{float:left; color:#6e6e6e; font-style:italic; *padding-right:5px}
+.themeframework-adminhtml-area-edit .col-right tr td .note{color:#333333; font-size:12px; font-weight:bold;margin-top:6px}
+/*them*/
+.themeframework-adminhtml-area-edit .attr-list td.value input.input-checkbox{background: none !important; width: auto;right:42px; left:auto; position: absolute; padding: 0 !important;border:none!important;margin-left:5px}
+.themeframework-adminhtml-area-edit .attr-list td.attr-label-checkbox{width:190px!important;}
+.themeframework-adminhtml-area-edit .attr-list td.value.attr-checkbox{padding-top:9px}
+
+
+.themeframework-adminhtml-area-edit .col-main .clear{padding:0 0 15px 0;}
+.themeframework-adminhtml-area-edit .col-right .attr-list td.label label{}
+.themeframework-adminhtml-area-edit .col-right .attr-list td .text-checkbox{color:#f56f09}
+.themeframework-adminhtml-area-edit select optgroup{    border-bottom: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    margin: 0 4px;
+    padding: 5px 4px;
+	font-style: normal;}
+.themeframework-adminhtml-area-edit select optgroup label{font-style: normal;}
+.themeframework-adminhtml-area-edit select.multiselect optgroup option{ border:none!important; margin-top:0}	
+.themeframework-adminhtml-area-edit select.multiselect option{margin:5px 4px 0; padding:5px 4px;   border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;}
+.themeframework-adminhtml-area-edit select.multiselect option:first-child{background-color:#d4d4d4}	
+.themeframework-adminhtml-area-edit select.multiselect optgroup option:first-child{background-color:#fff}	
+.themeframework-adminhtml-area-edit .attr-list td.value textarea{width: 204px !important;box-shadow:0 2px #EAEAEA; behavior:url(border-radius.htc); border-radius:6px;  -moz-border-radius: 6px;
+    -webkit-border-radius: 6px; 
+    -khtml-border-radius: 6px;border:1px solid #CCCCCC !important}
+
+/*hach for ie7*/
+.themeframework-adminhtml-area-edit .attr-list td.label{*width: 250px !important;}
+.themeframework-adminhtml-area-edit .attr-list td.label{padding: 8px 2px 2px;}
+.themeframework-adminhtml-area-edit .attr-list td{}
+/*hack for safari
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{ .themeframework-adminhtml-area-edit button.save{margin-left:-3px!important;}}*/
+.themeframework-adminhtml-area-edit button.add span:after, .themeframework-adminhtml-area-edit button.delete span:after
+{
+	clear: none;
+    content: ".";
+    display: none;
+    font-size: 0;
+    height: auto;
+    line-height: 0;
+    overflow: hidden !important;
+}

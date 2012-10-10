@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <themeframework_adminhtml_area_index>
+		<reference name="content">
+            <block type="themeframework/adminhtml_area" name="cms_block"></block>
+        </reference>
+    </themeframework_adminhtml_area_index>
+	<themeframework_adminhtml_page_index>
+		<reference name="content">
+            <block type="themeframework/adminhtml_page" name="page_manager"></block>
+        </reference>
+    </themeframework_adminhtml_page_index>
+</layout>
