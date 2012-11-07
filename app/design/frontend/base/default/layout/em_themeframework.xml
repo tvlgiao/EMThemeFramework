@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <themeframework_area_preview>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/em_themeframework.css</stylesheet></action>
+			<!--action method="addItem"><type>skin_js</type><name>js/em_themeframework/jquery.js</name></action-->
+			<action method="addItem"><type>skin_js</type><name>js/em_themeframework/em_themeframework.js</name></action>
+		</reference>	
+        <update handle="cms_index_index" />
+    </themeframework_area_preview>
+</layout>

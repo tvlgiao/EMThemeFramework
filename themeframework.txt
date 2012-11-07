@@ -1,10 +1,24 @@
-app\code\local\EM\Themeframework
-app\etc\modules\EM_Themeframework.xml
-app\design\adminhtml\default\default\layout\em_themeframework.xml
-app\design\adminhtml\default\default\template\em_themeframework
-app\design\frontend\default\emsample
-app\design\frontend\default\default\layout\em_themeframework.xml
-skin\adminhtml\default\default\em_themeframework
-skin\frontend\default\emsample
-skin\frontend\default\default\css\em_themeframework.css
-skin\frontend\default\default\js\em_themeframework
+==== Themeframework 10-10-12 ====
+
+=== Fixes ===
+- move các file sau vào base\default :
+	app/design/frontend/default/default/layout/em_themeframework.xml
+	skin/frontend/default/default/css/em_themeframework.css
+	skin/frontend/default/default/js/em_themeframework/em_themeframework.js
+	skin/frontend/default/default/js/em_themeframework/jquery.js
+- sửa lại file em_themeframework.xml, chỉ load file em_themeframework.js vào trang khi sử dụng chức năng review
+	
+=== Contents ===
+app/code/local/EM/Themeframework
+app/etc/modules/EM_Themeframework.xml
+app/design/adminhtml/default/default/layout/em_themeframework.xml
+app/design/adminhtml/default/default/template/em_themeframework
+app/design/frontend/default/emsample
+app/design/frontend/base/default/layout/em_themeframework.xml
+skin/adminhtml/default/default/em_themeframework
+skin/frontend/default/emsample
+skin/frontend/base/default/css/em_themeframework.css
+skin/frontend/base/default/js/em_themeframework
+
+==== Themeframework 27-08-12 ====
+Thêm chức năng preview area's positions

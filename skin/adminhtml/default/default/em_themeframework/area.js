@@ -131,10 +131,7 @@ EM_Framework.canvas = {
 		$div.hide().fadeIn()
 			.sortable({
 				items: '.grid_item, .clear',
-				connectWith: '.container_24',
-				stop: function(event, ui) {
-					ui.item.attr('style', '');
-				}
+				connectWith: '.container_24'
 			}).disableSelection()
 			.click(function() {
 				$('.container_24, .container_free').removeClass('selected');
