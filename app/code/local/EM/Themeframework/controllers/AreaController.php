@@ -47,6 +47,17 @@ class EM_Themeframework_AreaController extends Mage_Core_Controller_Front_Action
         }
     }
 
+	public function previewBlockAction() {
+		$key = $this->getRequest()->getParam('key');
+		Mage::getSingleton('core/cookie')->set('EDIT_BLOCK_KEY', $key);
+		$this->getResponse()->setRedirect(Mage::getBaseUrl());
+    }
+
+	public function disablePreviewAction() {
+		Mage::getSingleton('core/cookie')->delete('EDIT_BLOCK_KEY');
+		$this->getResponse()->setRedirect(Mage::getBaseUrl());
+	}
+
     /**
      * Default index action (with 404 Not Found headers)
      * Used if default page don't configure or available
@@ -58,4 +69,5 @@ class EM_Themeframework_AreaController extends Mage_Core_Controller_Front_Action
         $this->loadLayout();
         $this->renderLayout();
     }
+
 }

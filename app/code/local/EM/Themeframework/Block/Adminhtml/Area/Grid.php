@@ -104,8 +104,8 @@ class EM_Themeframework_Block_Adminhtml_Area_Grid extends Mage_Adminhtml_Block_W
         ));
 
         $this->addColumn('action', array(
-            'header'    => Mage::helper('themeframework')->__('Action'),
-            'width'     => 50,
+            'header'    => Mage::helper('themeframework')->__('Preview'),
+            'width'     => 100,
             'sortable'  => false,
             'filter'    => false,
             'renderer'  => 'themeframework/adminhtml_area_grid_renderer_action',

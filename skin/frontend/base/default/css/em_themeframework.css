@@ -1,3 +1,25 @@
 .debug-container { position: relative; overflow: hidden; }
 .debug { border: solid 1px red; left: 0; top: 0; position: absolute; margin: 1px; z-index: 9999 }
 .dbg-title { font-weight: bold; color: white; background-color: red; float: right; padding: 2px 4px; font-size: 18px; }
+
+.em_themeframework_previewblock {
+	display:inline;
+	background:#ff0000;
+	padding:10px;
+	opacity:.9;
+	font:bold 14px/1.2 "Courier New", san-serif;
+	text-align:center;
+	color:#fff;
+	border:1px solid #fff;
+	z-index:9999;
+	box-shadow:0 0 10px #666;
+	white-space:nowrap;
+}
+
+.em_themeframework_previewblock a {
+	color:#fff;
+}
+.em_themeframework_previewblock .path { font-size:10px }
+
+#em_themeframework_previewblock_actions { position:fixed; top:5px; left:5px; z-index:10000}
+#em_themeframework_previewblock_actions .turnoff { display:block; padding:5px 10px; background:#fff; color:#ff0000; border:1px solid #000; font-size:14px; font-weight:bold; box-shadow:0 0 10px #666 }

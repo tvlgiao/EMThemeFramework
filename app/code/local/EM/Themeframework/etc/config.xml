@@ -49,6 +49,14 @@
 					</themeframework_change_template>
 				</observers>
 			</controller_action_layout_generate_blocks_after>
+			<core_block_abstract_to_html_after>
+				<observers>
+					<designer>
+						<class>themeframework/observer</class>
+						<method>processAfterHtmlDispatch</method>
+					</designer>
+				</observers>
+			</core_block_abstract_to_html_after>
 		</events>
     </frontend>
 	<adminhtml>
@@ -114,10 +122,10 @@
     <admin>
         <routers>
             <themeframework>
-                <use>admin</use>
+				<use>admin</use>
                 <args>
-                    <module>EM_Themeframework</module>
-                    <frontName>themeframework_admin</frontName>
+					<module>EM_Themeframework</module>
+					<frontName>themeframework_admin</frontName>
                 </args>
             </themeframework>
         </routers>
