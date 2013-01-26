@@ -61,26 +61,54 @@
     </frontend>
 	<adminhtml>
 		<menu>
-			<system>
+			<!-- <system>
+							<children>
+								<em_themeframework module="themeframework">
+									<title>EM ThemeFramework</title>
+									<sort_order>35</sort_order>
+									<children>
+										<layout_manager>
+											<title>Layout Manager</title>
+											<sort_order>1</sort_order>
+											<action>themeframework_admin/adminhtml_area</action>
+										</layout_manager>
+										<page_manager>
+											<title>Page Manager</title>
+											<sort_order>2</sort_order>
+											<action>themeframework_admin/adminhtml_page</action>
+										</page_manager>
+									</children>
+								</em_themeframework>
+							</children>
+						</system> -->
+			<emthemes translate="title">
+				<title>EMThemes</title>
+				<sort_order>72</sort_order>
 				<children>
-					<em_themeframework module="themeframework">
-						<title>EM ThemeFramework</title>
-						<sort_order>35</sort_order>
+					<visual_content_editor module="themeframework" translate="title">
+						<title>Visual Content Editor</title>
+						<sort_order>110</sort_order>
+						<action>themeframework_admin/adminhtml_area/previewBlock/</action>
+					</visual_content_editor>
+					
+					<emthemeframework module="themeframework" translate="title">
+						<title>EM Theme Framework</title>
+						<sort_order>120</sort_order>
 						<children>
-							<layout_manager>
-								<title>Layout Manager</title>
-								<sort_order>1</sort_order>
-								<action>themeframework_admin/adminhtml_area</action>
+							<layout_manager module="themeframework" translate="title">
+								<title>Layout Design</title>
+								<sort_order>10</sort_order>
+								<action>themeframework_admin/adminhtml_area/</action>
 							</layout_manager>
-							<page_manager>
-								<title>Page Manager</title>
-								<sort_order>2</sort_order>
-								<action>themeframework_admin/adminhtml_page</action>
+							<page_manager module="themeframework" translate="title">
+								<title>Layout Update</title>
+								<sort_order>20</sort_order>
+								<action>themeframework_admin/adminhtml_page/</action>
 							</page_manager>
 						</children>
-					</em_themeframework>
+					</emthemeframework>
 				</children>
-			</system>
+			</emthemes>
 		</menu>
 		<acl>
 			<resources>

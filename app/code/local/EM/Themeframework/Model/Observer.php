@@ -12,15 +12,16 @@ class EM_Themeframework_Model_Observer extends Varien_Object
 	protected function initPages($handles){
 		if(!$this->_pages){
 			$pages = Mage::getSingleton('themeframework/page')->getCollection()->addFieldToFilter('status',1)
-				->addFieldToFilter(array('handle','custom_handle'),array(
-					array(
-						'in'		=>	$handles
-					),
-					array(
-						'in'		=>	$handles
-					)
-				))
 				->addStoreFilter(Mage::app()->getStore()->getId());
+
+			// add or condition for handle & custom_handle attribute
+			foreach($handles as &$handle)
+				$handle = '\'' . $handle . '\'';
+			$cond = implode(",", $handles);
+			$where = $pages->getSelect()->getPart(Zend_Db_Select::WHERE);
+			$where[] = " AND (handle IN ($cond) OR custom_handle IN ($cond))";
+			$pages->getSelect()->setPart(Zend_Db_Select::WHERE, $where);
+			
 			$pages->getSelect()->order('sort DESC');	
 			$this->_pages = $pages;	
 		}

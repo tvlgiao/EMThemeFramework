@@ -179,4 +179,7 @@ class EM_Themeframework_Adminhtml_AreaController extends Mage_Adminhtml_Controll
         $this->_redirect('*/*/');
 	}
 	
+	function previewBlockAction() {
+		$this->getResponse()->setRedirect(Mage::getModel('core/url')->getDirectUrl('themeframework/area/previewBlock/key/'.Mage::getSingleton('adminhtml/url')->getSecretKey('cms_block', 'edit')));
+	}
 }

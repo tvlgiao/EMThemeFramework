@@ -1,3 +1,10 @@
+/**
+ * EM ThemeFramework
+ *
+ * @license commercial software
+ * @copyright (c) 2012 Codespot Software JSC - EMThemes.com. (http://www.emthemes.com)
+ */
+
 jQuery(window).load(function () {
 	var $ = jQuery;
 	$('body').addClass('cms-index-index');

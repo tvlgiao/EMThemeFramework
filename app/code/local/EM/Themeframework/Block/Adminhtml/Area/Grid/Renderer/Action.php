@@ -30,8 +30,8 @@ class EM_Themeframework_Block_Adminhtml_Area_Grid_Renderer_Action
     public function render(Varien_Object $row)
     {
         $urlModel = Mage::getModel('core/url')->setStore($row->getData('_first_store_id'));
-        $href = $urlModel->getUrl('../themeframework/area/preview/id');
 		$previewBlockUrl = Mage::getModel('core/url')->getDirectUrl('themeframework/area/previewBlock/key/'.Mage::getSingleton('adminhtml/url')->getSecretKey('cms_block', 'edit'));
-        return '<a href="'.$href.$row->getId().'" target="_blank">'.$this->__('Areas').'</a> | <a href="'.$previewBlockUrl.'" target="_blank">'.$this->__("Blocks").'</a>';
+		$href = Mage::getUrl('themeframework/area/preview', array('id' => $row->getId()));
+        return '<a href="'.$href.'" target="_blank">'.$this->__('Areas').'</a> | <a href="'.$previewBlockUrl.'" target="_blank">'.$this->__("Blocks").'</a>';
     }
 }

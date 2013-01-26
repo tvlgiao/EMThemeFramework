@@ -146,4 +146,8 @@ if(!$installer->tableExists($installer->getTable('themeframework/page_store'))){
 	$installer->getConnection()->createTable($table);
 }
 
+/**
+* Add Data: move to theme setting 
+*/
+
 $installer->endSetup();

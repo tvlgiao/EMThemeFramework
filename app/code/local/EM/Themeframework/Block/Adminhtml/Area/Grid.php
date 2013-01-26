@@ -55,11 +55,11 @@ class EM_Themeframework_Block_Adminhtml_Area_Grid extends Mage_Adminhtml_Block_W
 			'width' =>50
         ));
 
-		/*$this->addColumn('package_theme', array(
+		$this->addColumn('package_theme', array(
 			'header'    => Mage::helper('themeframework')->__('Package/Theme'),
 			'align'     => 'left',
 			'index'     => 'package_theme',
-		));*/
+		));
 		
 		$this->addColumn('layout', array(
 			'header'    => Mage::helper('themeframework')->__('Layout'),
