@@ -132,4 +132,132 @@ class EM_Themeframework_Helper_Theme {
 		
 		return $html;
 	}
+	
+	function displayBootstrap($root, $layout = '1column') {
+		$isPreview = Mage::registry('is_preview');
+		if ($isPreview) {
+			$model = Mage::getModel('themeframework/area')->getCollection()
+							->addFilter('area_id', array('eq' => Mage::app()->getRequest()->getParam('id')))
+							->getFirstItem();
+		} else {
+			$collection = Mage::getModel('themeframework/area')->getCollection()
+							->addStoreFilter(Mage::app()->getStore()->getId())
+							->addFilter('layout', array('eq' => $layout))
+							->addFilter('is_active', array('eq' => 1))
+							->addOrder('store_id', 'DESC');
+			$model = $collection->getFirstItem();
+		}
+		
+		$content = unserialize($model->getContent());
+		$html = '';
+		foreach ($content as $div) {
+			$containerHtml = '';
+			
+			// div.container_24
+			if ($div['type'] == 'container_24') {
+				$spanHtml = '';
+				$rowHtml = '';
+				$col = 0;
+				foreach ($div['items'] as $grid) {
+					// div.clear
+					if (is_string($grid) && $grid == 'clear') {
+						if ($col > 0) {
+							// finish a div.row
+							$rowHtml .= '<div class="row'.($div['fluid'] ? '-fluid' : '').'">'.$spanHtml.'</div>';
+							$spanHtml = '';
+							$col = 0;
+						}
+					// div.grid_*
+					} elseif (is_array($grid)) {
+						
+						// finish a div.row
+						$col += floor($grid['column']/2);
+						if ($col > 12) {
+							$rowHtml .= '<div class="row'.($div['fluid'] ? '-fluid' : '').'">'.$spanHtml.'</div>';
+							$spanHtml = '';
+							$col = floor($grid['column']/2);
+						}
+						
+						$class = array('span'.floor($grid['column']/2));
+						# not available # if ($grid['push']) $class[] = 'push_'.$grid['push'];
+						# not available # if ($grid['pull']) $class[] = 'pull_'.$grid['pull'];
+						if ($grid['prefix']) $class[] = 'offset'.$grid['prefix'];
+						# not available # if ($grid['suffix']) $class[] = 'suffix_'.$grid['suffix'];
+						# not available # if ($grid['first']) $class[] = 'alpha';
+						# not available # if ($grid['last']) $class[] = 'omega';
+						if ($grid['custom_css']) $class[] = $grid['custom_css'];
+						$class = implode(' ', $class);
+						
+						
+						// blocks
+						$blockHtml = '';
+						$debugTitle = '';
+						foreach ($grid['items'] as $blockName) {
+							if (empty($firstBlockName)) $debugTitle = '<div class="dbg-title">'.$blockName.'</div>';
+							$blockHtml .= trim($root->getChildHtml($blockName));
+						}
+							
+						if ($blockHtml == '' && !$grid['display_empty'])
+							continue;
+							
+						if ($grid['inner_html'])
+							$blockHtml = str_replace('{{content}}', $blockHtml, $grid['inner_html']);
+						
+						if ($isPreview) {
+							$spanHtml .= '<div class="'.$class.' debug-container">'.$blockHtml.'<div class="debug">'.$debugTitle.'</div></div>';	
+						} else {
+							$spanHtml .= '<div class="'.$class.'">'.$blockHtml.'</div>';	
+						}
+					}
+				}
+				
+				if ($col > 0) {
+					// finish a div.row
+					$rowHtml .= '<div class="row'.($div['fluid'] ? '-fluid' : '').'">'.$spanHtml.'</div>';
+					$spanHtml = '';
+				}
+				
+				if ($rowHtml == '' && !$div['display_empty'])
+					continue;
+				
+				if ($div['inner_html'])
+					$rowHtml = str_replace('{{content}}', $rowHtml, $div['inner_html']);
+				
+				$containerHtml .= '<div class="container'.($div['fluid'] ? '-fluid ' : ' ').$div['custom_css'].'">';
+				$containerHtml .= $rowHtml;	
+				$containerHtml .= '</div>';
+			}
+			
+			// free div
+			else {
+				$blockHtml = '';
+				$debugTitle = '';
+				foreach ($div['items'] as $blockName) {
+					if (empty($firstBlockName)) $debugTitle = '<div class="dbg-title">'.$blockName.'</div>';
+					$blockHtml .= trim($root->getChildHtml($blockName));
+				}
+				
+				if ($blockHtml == '' && !$div['display_empty'])
+					continue;
+					
+				if ($div['inner_html'])
+					$blockHtml = str_replace('{{content}}', $blockHtml, $div['inner_html']);
+				
+				if ($isPreview) {
+					$containerHtml .= '<div class="'.$div['custom_css'].' debug-container"><div class="debug">'.$debugTitle.'</div>';
+				} else {
+					$containerHtml .= '<div class="'.$div['custom_css'].'">';
+				}
+				$containerHtml .= $blockHtml;
+				$containerHtml .= '</div>';
+			}
+			
+			if ($div['outer_html'])
+				$containerHtml = str_replace('{{content}}', $containerHtml, $div['outer_html']);
+			
+			$html .= $containerHtml;
+		}
+		
+		return $html;
+	}
 }

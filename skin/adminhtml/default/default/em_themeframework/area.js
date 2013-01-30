@@ -148,7 +148,8 @@ EM_Framework.canvas = {
 				custom_css: data.custom_css,
 				inner_html: data.inner_html,
 				outer_html: data.outer_html,
-				display_empty: data.display_empty
+				display_empty: data.display_empty,
+				fluid: data.fluid
 			});
 		}
 		
@@ -182,7 +183,8 @@ EM_Framework.canvas = {
 				custom_css: data.custom_css,
 				inner_html: data.inner_html,
 				outer_html: data.outer_html,
-				display_empty: data.display_empty
+				display_empty: data.display_empty,
+				fluid: data.fluid
 			});
 		}
 		
@@ -299,6 +301,7 @@ EM_Framework.canvas = {
 		$('#container_attr_inner_html').val(o.inner_html);
 		$('#container_attr_outer_html').val(o.outer_html);
 		$('#container_attr_display_empty').attr('checked', o.display_empty ? 'checked' : false);
+		$('#container_attr_fluid').attr('checked', o.fluid ? 'checked' : false);
 	},
 	
 	/**
@@ -311,6 +314,7 @@ EM_Framework.canvas = {
 		ret.inner_html = $(container).data('inner_html') || '';
 		ret.outer_html = $(container).data('outer_html') || '';
 		ret.display_empty = $(container).data('display_empty') || false;
+		ret.fluid = $(container).data('fluid') || false;
 		
 		return ret;
 	},
@@ -325,6 +329,7 @@ EM_Framework.canvas = {
 		$container.data('inner_html', $('#container_attr_inner_html').val());
 		$container.data('outer_html', $('#container_attr_outer_html').val());
 		$container.data('display_empty', $('#container_attr_display_empty').attr('checked') ? true : false);
+		$container.data('fluid', $('#container_attr_fluid').attr('checked') ? true : false);
 		
 	},
 	
